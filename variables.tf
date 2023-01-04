@@ -34,3 +34,13 @@ variable "blob_container" {
 variable "blob_container2" {
 
 }
+
+variable "admin_username" {
+  type = string
+  
+}
+
+variable "admin_password" {
+  type = string
+  
+}

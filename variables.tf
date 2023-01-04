@@ -25,3 +25,8 @@ variable "tenantId" {
     type = string
   
 }
+
+variable "blob_container" {
+  
+  
+}

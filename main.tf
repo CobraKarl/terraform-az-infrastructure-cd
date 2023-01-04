@@ -38,6 +38,7 @@ module "storage" {
     source = "./module-2"
     RGName = var.RGName
     location = var.location
-    
+    blob_container = var.blob_container
+
   
 }

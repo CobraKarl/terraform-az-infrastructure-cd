@@ -33,3 +33,11 @@ module "vnet" {
     ]
   
 }
+
+module "storage" {
+    source = "./module-2"
+    RGName = var.RGName
+    location = var.location
+    
+  
+}

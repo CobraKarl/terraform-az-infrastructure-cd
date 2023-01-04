@@ -31,7 +31,6 @@ module "vnet" {
   depends_on = [
     azurerm_resource_group.rg
   ]
-
 }
 
 module "storage" {
@@ -39,6 +38,5 @@ module "storage" {
   RGName         = var.RGName
   location       = var.location
   blob_container = var.blob_container
-
-
+  blob_container2 = var.blob_container2
 }

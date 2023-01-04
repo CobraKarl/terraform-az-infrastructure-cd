@@ -39,12 +39,18 @@ module "storage" {
   location        = var.location
   blob_container  = var.blob_container
   blob_container2 = var.blob_container2
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
 }
 
 module "vm" {
   source   = "./module-3"
   RGName   = var.RGName
   location = var.location
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
 
 
 }

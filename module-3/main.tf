@@ -10,6 +10,9 @@ module "vnet" {
   source = "../module-1"
   location = var.location
   RGName = var.RGName
+  depends_on = [
+    RGName
+  ]
 
 
 }

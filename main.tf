@@ -28,5 +28,8 @@ module "vnet" {
     source = "./module-1"
     RGName = var.RGName
     location = var.location
+    depends_on = [
+      azurerm_resource_group.rg
+    ]
   
 }

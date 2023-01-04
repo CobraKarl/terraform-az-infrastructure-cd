@@ -26,7 +26,7 @@ resource "azurerm_resource_group" "rg" {
 
 module "vnet" {
     source = "./module-1"
+    RGName = var.RGName
     location = var.location
-    resource_group_name = var.RGName
   
 }

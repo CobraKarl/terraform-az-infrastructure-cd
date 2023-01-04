@@ -1,5 +1,5 @@
 subscriptionId=$(az account show --query id --output tsv)
-az ad sp create-for-rbac --role contributor --scopes /subscriptions/$subscriptionId --output tsv
+az ad sp create-for-rbac --role contributor --scopes /subscriptions/$subscriptionId
 
 
 

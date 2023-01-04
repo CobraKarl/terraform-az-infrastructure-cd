@@ -22,6 +22,8 @@ resource "azurerm_public_ip" "publicip" {
 }
 
 
+
+
 # Create Nic
 resource "azurerm_network_interface" "nicforvm" {
   name                = "nicforvm"
@@ -30,6 +32,7 @@ resource "azurerm_network_interface" "nicforvm" {
   ip_configuration {
     name                 = "internal"
     subnet_id            = "${module.vnet.azurerm_subnet_id}"
+    private_ip_address = "10.0.10.5"
     private_ip_address_allocation = "Static"
     public_ip_address_id = azurerm_public_ip.publicip.id
   }

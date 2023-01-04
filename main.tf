@@ -42,9 +42,9 @@ module "storage" {
 }
 
 module "vm" {
-    source = "./module-3"
-    RGName = var.RGName
-    location = var.location
-    
-  
+  source   = "./module-3"
+  RGName   = var.RGName
+  location = var.location
+
+
 }

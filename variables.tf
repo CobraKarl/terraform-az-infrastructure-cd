@@ -1,16 +1,16 @@
 variable "RGName" {
-    type = string
-  
+  type = string
+
 }
 
 variable "location" {
-    type = string
-  
+  type = string
+
 }
 
 variable "subscriptionId" {
-    type = string
-  
+  type = string
+
 }
 
 variable "clientId" {
@@ -22,11 +22,11 @@ variable "clientSecret" {
 }
 
 variable "tenantId" {
-    type = string
-  
+  type = string
+
 }
 
 variable "blob_container" {
-  
-  
+
+
 }

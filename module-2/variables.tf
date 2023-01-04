@@ -9,6 +9,6 @@ variable "location" {
 }
 
 variable "blob_container" {
-  
-  
+
+
 }

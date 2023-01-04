@@ -8,10 +8,10 @@ terraform {
 }
 
 provider "azurerm" {
-    subscription_id = var.subscriptionId
-    client_id = var.clientId
-    client_secret = var.clientSecret
-    tenant_id = var.tenantId
+  subscription_id = var.subscriptionId
+  client_id       = var.clientId
+  client_secret   = var.clientSecret
+  tenant_id       = var.tenantId
   features {
 
   }
@@ -19,26 +19,26 @@ provider "azurerm" {
 
 # Create RG
 resource "azurerm_resource_group" "rg" {
-    name = var.RGName
-    location = var.location
-  
+  name     = var.RGName
+  location = var.location
+
 }
 
 module "vnet" {
-    source = "./module-1"
-    RGName = var.RGName
-    location = var.location
-    depends_on = [
-      azurerm_resource_group.rg
-    ]
-  
+  source   = "./module-1"
+  RGName   = var.RGName
+  location = var.location
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
+
 }
 
 module "storage" {
-    source = "./module-2"
-    RGName = var.RGName
-    location = var.location
-    blob_container = var.blob_container
+  source         = "./module-2"
+  RGName         = var.RGName
+  location       = var.location
+  blob_container = var.blob_container
 
-  
+
 }

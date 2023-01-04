@@ -16,10 +16,10 @@ resource "random_string" "resource_string" {
 
 # Create Storage Account
 resource "azurerm_storage_account" "storage" {
-  name                = "storage${random_string.resource_string.result}"
-  resource_group_name = var.RGName
-  location            = var.location
-  account_tier        = "Standard"
+  name                     = "storage${random_string.resource_string.result}"
+  resource_group_name      = var.RGName
+  location                 = var.location
+  account_tier             = "Standard"
   account_replication_type = "LRS"
   allow_blob_public_access = true
 }

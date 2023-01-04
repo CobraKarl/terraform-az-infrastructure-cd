@@ -48,6 +48,8 @@ module "vm" {
   source   = "./module-3"
   RGName   = var.RGName
   location = var.location
+  admin_username = var.admin_username
+  admin_password = var.admin_password
   depends_on = [
     azurerm_resource_group.rg
   ]

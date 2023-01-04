@@ -30,7 +30,7 @@ resource "azurerm_network_interface" "nicforvm" {
   location            = var.location
   ip_configuration {
     name                 = "internal"
-    subnet_id            = "${module.vnet.azurerm_subnet.id}"
+    subnet_id            = "${module.vnet.azurerm_subnet.subnet.id}"
     private_ip_address_allocation = "Static"
     public_ip_address_id = azurerm_public_ip.publicip.id
   }

@@ -6,13 +6,13 @@ terraform {
     }
   }
 }
-# module "vnet" {
-#   source = "../module-1"
-#   location = var.location
-#   RGName = var.RGName
+module "vnet" {
+  source = "../module-1"
+  location = var.location
+  RGName = var.RGName
 
 
-# }
+}
 # Create Public IP
 resource "azurerm_public_ip" "publicip" {
   name                = "pubipforvm"

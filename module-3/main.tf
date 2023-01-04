@@ -10,11 +10,7 @@ module "vnet" {
   source = "../module-1"
   location = var.location
   RGName = var.RGName
-  depends_on = [
-    RGName
-  ]
-
-
+  
 }
 # Create Public IP
 resource "azurerm_public_ip" "publicip" {

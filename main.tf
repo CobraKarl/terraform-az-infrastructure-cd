@@ -34,9 +34,17 @@ module "vnet" {
 }
 
 module "storage" {
-  source         = "./module-2"
-  RGName         = var.RGName
-  location       = var.location
-  blob_container = var.blob_container
+  source          = "./module-2"
+  RGName          = var.RGName
+  location        = var.location
+  blob_container  = var.blob_container
   blob_container2 = var.blob_container2
+}
+
+module "vm" {
+    source = "./module-3"
+    RGName = var.RGName
+    location = var.location
+    
+  
 }

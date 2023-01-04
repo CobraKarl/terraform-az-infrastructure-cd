@@ -20,7 +20,6 @@ resource "azurerm_storage_account" "storage" {
   resource_group_name = var.RGName
   location            = var.location
   account_tier        = "Standard"
-
   account_replication_type = "LRS"
   allow_blob_public_access = true
 }
@@ -28,6 +27,14 @@ resource "azurerm_storage_account" "storage" {
 # Create Blob container
 resource "azurerm_storage_container" "blob_container" {
   name                  = var.blob_container
+  storage_account_name  = azurerm_storage_account.storage.name
+  container_access_type = "blob"
+
+}
+
+# Create Blob container2
+resource "azurerm_storage_container" "blob_container2" {
+  name                  = var.blob_container2
   storage_account_name  = azurerm_storage_account.storage.name
   container_access_type = "blob"
 

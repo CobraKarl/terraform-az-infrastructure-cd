@@ -26,5 +26,7 @@ resource "azurerm_resource_group" "rg" {
 
 module "vnet" {
     source = "./module-1"
+    location = var.location
+    resource_group_name = var.RGName
   
 }

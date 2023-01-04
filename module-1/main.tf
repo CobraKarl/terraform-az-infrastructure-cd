@@ -25,6 +25,6 @@ resource "azurerm_subnet" "subnet" {
 
 }
 
-output "azurerm_subnet" {
-  value = azurerm_subnet.subnet
+output "azurerm_subnet_id" {
+  value = azurerm_subnet.subnet.id
 }

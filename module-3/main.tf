@@ -31,7 +31,7 @@ resource "azurerm_network_interface" "nicforvm" {
   ip_configuration {
     name                 = "internal"
     subnet_id            = module.vnet.azurerm_subnet.id
-    private_ip_address   = "Static"
+    private_ip_address_private_ip_address_allocation = "Static"
     public_ip_address_id = azurerm_public_ip.publicip.id
   }
 

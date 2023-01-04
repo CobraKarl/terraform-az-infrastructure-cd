@@ -26,4 +26,5 @@ resource "azurerm_resource_group" "rg" {
 
 module "vnet" {
     source = "./module-1"
+  
 }
